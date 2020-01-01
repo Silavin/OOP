@@ -7,6 +7,8 @@ class Person {
     this.skills = [];
   }
 
+  // Purposefully causing pain and suffering.
+
   get fullName() {
     return `${this.firstName} ${this.middleName} ${this.lastName}`;
   }
