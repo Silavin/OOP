@@ -1,17 +1,18 @@
 class Person {
-  constructor({ firstName, lastName, job }) {
+  constructor({ firstName, middleName, lastName, job }) {
     this.firstName = firstName;
     this.lastName = lastName;
+    this.middleName = middleName;
     this.job = job;
     this.skills = [];
   }
 
   get fullName() {
-    return `${this.firstName} ${this.lastName}`;
+    return `${this.firstName} ${this.middleName} ${this.lastName}`;
   }
 
   set fullName(fN) {
-    [this.firstName, this.lastName] = fN.split(' ');
+    [this.firstName, this.middleName, this.lastName] = fN.split(' ');
   }
 
   learn(skill) {
